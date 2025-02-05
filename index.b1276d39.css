@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.people {
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 40px 30px;
+  max-width: 440px;
+  margin: 30px 35px 0;
+  display: grid;
+  position: relative;
+}
+
+@media (width >= 750px) {
+  .people {
+    margin: 30px 160px 0;
+  }
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 900px;
+    margin: 30px 55px 0;
+  }
+}
+
+@media (width >= 1500px) {
+  .people {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 30px 305px 0;
+  }
+}
+
+.person {
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 0;
+  background-color: #0000;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.person .name {
+  color: #2f4f4f;
+  margin-top: 18px;
+  font-weight: 700;
+  transition: font-size 1s linear;
+}
+
+.person .extra {
+  opacity: 0;
+  margin-top: 10.8px;
+  font-size: 21.6px;
+  transition: margin-bottom 1s linear;
+}
+
+.person .sport:after {
+  content: ",";
+}
+
+.person .pay:before {
+  content: "$";
+}
+
+.person .pay:after {
+  content: "M";
+}
+
+.person .rank {
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: 900;
+  display: flex;
+  position: absolute;
+  top: 84px;
+  right: 10px;
+}
+
+.person:hover {
+  z-index: 1;
+  background-color: #eee;
+  transform: scale(1.1);
+}
+
+.person:hover .name {
+  font-size: 24px;
+}
+
+.person:hover .extra {
+  opacity: 1;
+  margin-bottom: 19px;
+}
+
+.person:hover .rank {
+  transition: all 1s linear;
+  top: 112px;
+  right: 24px;
+}
+
+.person:hover img {
+  border-radius: 60px;
+  width: 240px;
+  height: 240px;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: all 1s linear;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */

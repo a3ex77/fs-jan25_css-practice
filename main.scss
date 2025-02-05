@@ -1,1 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+}
 
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.people {
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin: 30px 35px 0;
+  max-width: 440px;
+
+  @media (min-width: 750px) {
+    margin: 30px 160px 0;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 30px 55px 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 900px;
+  }
+
+  @media (min-width: 1500px) {
+    margin: 30px 305px 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: transparent;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 0;
+
+  & .name {
+    margin-top: 18px;
+    color: #2F4F4F;
+    font-weight: 700;
+    transition: font-size linear 1s;
+
+  }
+
+  & .extra {
+    opacity: 0;
+    margin-top: 10.8px;
+    font-size: 21.6px;
+    transition: margin-bottom linear 1s;
+
+  }
+
+  & .sport::after {
+    content: ',';
+  }
+
+  & .pay::before {
+    content: '$';
+  }
+
+  & .pay::after {
+    content: 'M';
+  }
+
+  & .rank {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 84px;
+    right: 10px;
+
+    background-color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
+    color: #8B0000;
+    font-weight: 900;
+  }
+  
+  &:hover {
+    background-color: #EEEEEE;
+    transform: scale(1.1);
+    z-index: 1;
+    
+    .name{
+      font-size: 24px;
+    }
+
+     .extra {
+      opacity: 1;
+      margin-bottom: 19px;
+    }
+
+   .rank {
+      top: 112px;
+      right: 24px;
+   transition: all 1s linear;
+    }
+
+    img {
+      margin-top: 12px;
+      margin-left: 12px;
+      margin-right: 12px;
+      width: 240px;
+      height: 240px;
+      border-radius: 60px;
+      transition: all linear 1s;
+    }
+  }
+}
+//1
+//1
